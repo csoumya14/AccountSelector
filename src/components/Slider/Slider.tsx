@@ -1,10 +1,17 @@
-import { FC } from "react";
-import ReactSlider from "react-slider";
-import { StyledSlider, StyledThumb, StyledTrack } from "./Slider.style";
+import { FC, useState } from "react";
+import {
+  StyledAgeValue,
+  StyledFieldSet,
+  StyledSlider,
+  StyledThumb,
+  StyledTrack,
+} from "./Slider.style";
+import { DataType } from "../../types/dataType";
 
-interface SliderTypes {}
-
-
+interface SliderTypes {
+  jsonData: DataType[];
+  setFilteredData: React.Dispatch<React.SetStateAction<DataType[]>>;
+}
 
 interface StateTypes {
   index: number;
@@ -12,28 +19,29 @@ interface StateTypes {
   valueNow?: number;
 }
 
-export const Slider: FC<SliderTypes> = () => {
+export const Slider: FC<SliderTypes> = ({ jsonData, setFilteredData }) => {
+  const [val, setValue] = useState<number | readonly number[]>(0);
+  const handleChange = (newValue: number | readonly number[]) => {
+    setValue(newValue);
+    const filteredDataValues = jsonData.filter(
+      (item) => item["f:min_alder"][0] >= `${val}`
+    );
+    setFilteredData(filteredDataValues);
+  };
   const Track = (props: any, state: StateTypes) => (
     <StyledTrack {...props} index={state.index} />
   );
-  const Thumb = (props:any, state:StateTypes) => (
+  const Thumb = (props: any, state: StateTypes) => (
     <StyledThumb {...props}>{state.valueNow}</StyledThumb>
   );
   return (
-    <StyledSlider
-      defaultValue={[50, 75]}
-      renderTrack={Track}
-      renderThumb={Thumb}
-      onBeforeChange={(value, index) =>
-        console.log(`onBeforeChange: ${JSON.stringify({ value, index })}`)
-      }
-      onChange={(value, index) =>
-        console.log(`onChange: ${JSON.stringify({ value, index })}`)
-      }
-      onAfterChange={(value, index) =>
-        console.log(`onAfterChange: ${JSON.stringify({ value, index })}`)
-      }
-      
-    />
+    <StyledFieldSet title="Hvor gammel er du?">
+      <StyledAgeValue textLevel="p">{val}</StyledAgeValue>
+      <StyledSlider
+        renderTrack={Track}
+        renderThumb={Thumb}
+        onChange={(value, index) => handleChange(value)}
+      />
+    </StyledFieldSet>
   );
 };

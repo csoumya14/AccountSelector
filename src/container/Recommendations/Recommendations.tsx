@@ -1,9 +1,8 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import {
   ListContainer,
   Section,
   StyledBanner,
-  StyledButton,
   StyledDescriptionDetail,
   StyledDescriptionList,
   StyledDescriptionTerm,
@@ -21,10 +20,10 @@ export const Recommendations: FC<RecommendationsTypes> = ({ filteredData }) => {
     setItemsToShow((prevItems) => prevItems + 3); // Increase the number of items to show
   }; */
   // const dataToShow = filteredData.slice(0, 10);
-
+  console.log({ filteredData });
   return (
     <Section>
-      <ListContainer totalListItems={filteredData.length}>
+      <ListContainer totallistitems={filteredData.length}>
         {filteredData.map((item) => (
           <StyledListItem>
             <StyledBanner textLevel="p">
@@ -33,26 +32,22 @@ export const Recommendations: FC<RecommendationsTypes> = ({ filteredData }) => {
             </StyledBanner>
             <StyledDescriptionList>
               <div>
-                <StyledDescriptionTerm className="fontBarlowCondensed">
+                <StyledDescriptionTerm>
                   Markedsomraade Boliglan
                 </StyledDescriptionTerm>
-                <StyledDescriptionDetail className="fontBellefair">
+                <StyledDescriptionDetail>
                   {item["f:markedsomraadeBoliglan"]}
                 </StyledDescriptionDetail>
               </div>
               <div>
-                <StyledDescriptionTerm className="fontBarlowCondensed">
-                  Publiser Fra
-                </StyledDescriptionTerm>
-                <StyledDescriptionDetail className="fontBellefair">
+                <StyledDescriptionTerm>Publiser Fra</StyledDescriptionTerm>
+                <StyledDescriptionDetail>
                   {item["f:publiserFra"]}
                 </StyledDescriptionDetail>
               </div>
               <div>
-                <StyledDescriptionTerm className="fontBarlowCondensed">
-                  Markedsomraade
-                </StyledDescriptionTerm>
-                <StyledDescriptionDetail className="fontBellefair">
+                <StyledDescriptionTerm>Markedsomraade</StyledDescriptionTerm>
+                <StyledDescriptionDetail>
                   {item["f:markedsomraade"]}
                 </StyledDescriptionDetail>
               </div>

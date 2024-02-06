@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0;
     background-image: url(${img});
-  background-size: contain;
+    background-size: contain;
     font-family: 'Manrope', sans-serif;
     overflow-x:hidden;  
   }

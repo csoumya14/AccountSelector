@@ -10,7 +10,7 @@ const myTheme: DefaultTheme = {
       paleBlue: 'hsl(226, 100%, 87%)',
     },
     neutral: {
-      white: 'hsl (100, 100%, 100%)',
+      white: 'hsl(100, 100%, 100%)',
       veryPaleBlue: 'hsl(230, 100%, 99%)',
       lightGrayishBlue: 'hsl(224, 65%, 95%)',
       lightGrayishBlueBackground: 'hsl(223, 50%, 87%)',

@@ -31,6 +31,7 @@ export const App = () => {
       }
     };
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
   // console.log(jsonData.feed.entry);

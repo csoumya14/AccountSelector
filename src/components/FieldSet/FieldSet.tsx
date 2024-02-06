@@ -8,7 +8,7 @@ interface FieldSetTypes extends React.HTMLAttributes<HTMLFormElement> {
 
 export const FieldSet: FC<FieldSetTypes> = ({ title, children, className }) => (
   <fieldset className={className}>
-    <legend>{title}:</legend>
+    <legend>{title}</legend>
     {children}
   </fieldset>
 );

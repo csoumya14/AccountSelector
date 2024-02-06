@@ -19,15 +19,15 @@ export const StyledBanner = styled(Banner)`
   }
 `;
 
-export const ListContainer = styled.ul<{ totalListItems: number }>`
+export const ListContainer = styled.ul<{ totallistitems: number }>`
   ${(props) =>
-    props.totalListItems &&
+    props.totallistitems &&
     `
   display: grid;
   list-style-type: none;
   max-width:60vw;
   grid-gap: 2rem;
-  grid-template-rows:  repeat(${props.totalListItems} 1fr);   
+  grid-template-rows:  repeat(${props.totallistitems} 1fr);   
   grid-template-columns: repeat(1, 1fr);
   overflow-y:scroll;
   padding: 1rem ; 
@@ -39,6 +39,7 @@ export const StyledListItem = styled.li`
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
+  cursor: grab;
   padding: 2rem;
   justify-content: space-around;
   border-radius: 4px;
@@ -64,7 +65,7 @@ export const StyledDescriptionDetail = styled.dd`
   text-transform: uppercase;
   font-size: 18px;
   padding: 0.5rem 0rem;
-  color: ${(props) => props.theme.palette.neutral.white};
+  color: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
 `;
 
 export const StyledButton = styled.button`

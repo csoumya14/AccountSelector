@@ -1,6 +1,6 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { Checkbox } from "../Checkbox/Checkbox";
-import { FieldSet } from "../FieldSet/FieldSet";
+
 import { DataType } from "../../types/dataType";
 import {
   StyledCheckBoxContainer,
@@ -28,7 +28,7 @@ export const CheckBoxInformation: FC<CheckBoxInformationTypes> = ({
   setFilteredData,
 }) => {
   const [isSelected, setIsSelected] = useState(() => Array(4).fill(false));
-  const [selectedCheckboxes, setSelectedCheckboxes] = useState<string[]>([]);
+  const [ ,setSelectedCheckboxes] = useState<string[]>([]);
 
   const handleCheckboxChange = (position: number) => {
     const updatedIsSelected = [...isSelected];
