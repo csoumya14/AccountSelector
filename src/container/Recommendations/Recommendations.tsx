@@ -53,21 +53,29 @@ export const Recommendations: FC<RecommendationsTypes> = ({ filteredData }) => {
                   </StyledDescriptionDetail>
                 </Wrapper>
                 <Wrapper>
-                  <StyledDescriptionTerm>Boliglan</StyledDescriptionTerm>
+                  <StyledDescriptionTerm>Minimum alder</StyledDescriptionTerm>
                   <StyledDescriptionDetail>
-                    {item["f:markedsomraadeBoliglanTekst"]}
+                    {item["f:min_alder"]}
                   </StyledDescriptionDetail>
                 </Wrapper>
                 <Wrapper>
-                  <StyledDescriptionTerm>Maksimum belop</StyledDescriptionTerm>
+                  <StyledDescriptionTerm>Maximum alder</StyledDescriptionTerm>
+                  <StyledDescriptionDetail>
+                    {item["f:maks_alder"]}
+                  </StyledDescriptionDetail>
+                </Wrapper>
+                {item["f:produktpakke_tekst"][0] !== "" && (
+                  <Wrapper>
+                    <StyledDescriptionTerm>Produkt Pakke</StyledDescriptionTerm>
+                    <StyledDescriptionDetail>
+                      {item["f:produktpakke_tekst"]}
+                    </StyledDescriptionDetail>
+                  </Wrapper>
+                )}
+                <Wrapper>
+                  <StyledDescriptionTerm>Maksimum Belop</StyledDescriptionTerm>
                   <StyledDescriptionDetail>
                     {item["f:maks_belop"]}
-                  </StyledDescriptionDetail>
-                </Wrapper>
-                <Wrapper>
-                  <StyledDescriptionTerm>Minimum belop</StyledDescriptionTerm>
-                  <StyledDescriptionDetail>
-                    {item["f:min_belop"]}
                   </StyledDescriptionDetail>
                 </Wrapper>
               </StyledDescriptionList>

@@ -69,9 +69,10 @@ export const StyledDescriptionTerm = styled.dt`
 
 export const StyledDescriptionDetail = styled.dd`
   text-transform: uppercase;
+  text-align:center;
   font-size: 18px;
   padding: 0.5rem 0rem;
-  margin-inline-start: none;
+  margin-inline-start: 0px;
   color: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
 `;
 
