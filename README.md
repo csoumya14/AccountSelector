@@ -20,14 +20,13 @@ You will also see any lint errors in the console.
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
+  - [Screenshot](#screenshot)  
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [My Decisions and assumptions](#my-decisions-and-assumptions)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+  
+
 
 ## Overview
 
@@ -37,9 +36,9 @@ You will also see any lint errors in the console.
 
 ### Screenshot
 
-![](./images/spacetourismscreenshot.png)
+![](./images/bankaccountselector.png)
 
-### Links
+
 
 ## My process
 
@@ -51,9 +50,9 @@ You will also see any lint errors in the console.
 - [Styled Components](https://styled-components.com/) - For styles
 - [xml2js](https://www.npmjs.com/package/xml2js#node-xml2js) - XML to Javascript object converter
 
-### Screenshot
 
-![](./images/bankaccountselector.png)
+
+
 
 ### My decisions and assumptions
 
