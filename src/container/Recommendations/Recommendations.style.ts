@@ -63,16 +63,19 @@ export const StyledDescriptionList = styled.dl`
 
 export const StyledDescriptionTerm = styled.dt`
   text-transform: uppercase;
+  text-align: center;
   font-size: 14px;
   color: ${(props) => props.theme.palette.primary.lightRed};
 `;
 
 export const StyledDescriptionDetail = styled.dd`
   text-transform: uppercase;
-  text-align:center;
+  align-self: center;
+  text-align: center;
   font-size: 18px;
   padding: 0.5rem 0rem;
   margin-inline-start: 0px;
+  margin-left: 0px;
   color: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
 `;
 
