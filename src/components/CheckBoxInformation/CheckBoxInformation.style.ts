@@ -1,0 +1,16 @@
+import styled from "styled-components";
+import { FieldSet } from "../FieldSet/FieldSet";
+
+export const StyledFieldSet = styled(FieldSet)`
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
+`;
+
+export const StyledCheckBoxContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+`;
