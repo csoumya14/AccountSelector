@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import xml2js from "xml2js";
 import { myTheme } from "./themes/ThemeVariables";
@@ -23,7 +23,6 @@ export const App = () => {
             console.error("Error converting XML to JSON:", error);
           } else {
             setJsonData(result.feed.entry);
-            console.log(jsonData)
           }
         });
       } catch (error) {
@@ -31,22 +30,18 @@ export const App = () => {
       }
     };
     fetchData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
-
-  // console.log(jsonData.feed.entry);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <ThemeProvider theme={myTheme}>
       <GlobalStyle />
       <Header />
       <main>
-        <Home jsonData={jsonData} setJsonData={setJsonData}/>
+        <Home jsonData={jsonData} setJsonData={setJsonData} />
       </main>
     </ThemeProvider>
   );
 };
 
 export default App;
-
-

@@ -28,7 +28,7 @@ export const CheckBoxInformation: FC<CheckBoxInformationTypes> = ({
   setFilteredData,
 }) => {
   const [isSelected, setIsSelected] = useState(() => Array(4).fill(false));
-  const [ ,setSelectedCheckboxes] = useState<string[]>([]);
+  const [, setSelectedCheckboxes] = useState<string[]>([]);
 
   const handleCheckboxChange = (position: number) => {
     const updatedIsSelected = [...isSelected];
@@ -54,7 +54,7 @@ export const CheckBoxInformation: FC<CheckBoxInformationTypes> = ({
   return (
     <StyledFieldSet title="Velg alle som gjelder for deg:">
       {initialState.map((item, i) => (
-        <StyledCheckBoxContainer>
+        <StyledCheckBoxContainer key={item.id}>
           <Checkbox
             type="checkbox"
             name={item.name}

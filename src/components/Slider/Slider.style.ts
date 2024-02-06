@@ -30,15 +30,11 @@ export const StyledThumb = styled.div`
   cursor: grab;
 `;
 
-export const StyledTrack = styled.div<{ index: number }>`
-  ${(props) =>
-    props.index &&
-    `
-      top: 0;
-    bottom: 0;
-    background: ${props.index === 1 ? "#71797E" : "#D3D3D3"};
-    border-radius: 999px;
-  `}
+export const StyledTrack = styled.div`
+  top: 0;
+  bottom: 0;
+  background: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
+  border-radius: 999px;
 `;
 
 export const StyledAgeValue = styled(Banner)`

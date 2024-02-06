@@ -28,9 +28,7 @@ export const Slider: FC<SliderTypes> = ({ jsonData, setFilteredData }) => {
     );
     setFilteredData(filteredDataValues);
   };
-  const Track = (props: any, state: StateTypes) => (
-    <StyledTrack {...props} index={state.index} />
-  );
+  const Track = (props: any, state: StateTypes) => <StyledTrack {...props} />;
   const Thumb = (props: any, state: StateTypes) => (
     <StyledThumb {...props}>{state.valueNow}</StyledThumb>
   );

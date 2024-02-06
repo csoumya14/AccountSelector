@@ -10,8 +10,7 @@ interface HomeTypes {
 }
 
 export const Home: FC<HomeTypes> = ({ jsonData, setJsonData }) => {
-  const [filteredData, setFilteredData] = useState<DataType[]>([]);
-  console.log(filteredData);
+  const [filteredData, setFilteredData] = useState<DataType[]>([]); 
   return (
     <Container>
       <YourInformationSection

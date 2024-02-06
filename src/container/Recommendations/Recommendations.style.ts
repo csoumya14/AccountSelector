@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { Banner } from "../../components/Banner/Banner";
 
 export const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
   flex: 1;
 `;
 
@@ -19,25 +23,21 @@ export const StyledBanner = styled(Banner)`
   }
 `;
 
-export const ListContainer = styled.ul<{ totallistitems: number }>`
-  ${(props) =>
-    props.totallistitems &&
-    `
+export const ListContainer = styled.ul`
   display: grid;
   list-style-type: none;
-  max-width:60vw;
+  max-width: 60vw;
   grid-gap: 2rem;
-  grid-template-rows:  repeat(${props.totallistitems} 1fr);   
   grid-template-columns: repeat(1, 1fr);
-  overflow-y:scroll;
-  padding: 1rem ; 
-  `}
+  overflow-y: scroll;
+  padding: 1rem;
 `;
 
 export const StyledListItem = styled.li`
   width: 100%;
   margin-bottom: 1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   cursor: grab;
   padding: 2rem;
@@ -45,6 +45,12 @@ export const StyledListItem = styled.li`
   border-radius: 4px;
   background-color: white;
   box-shadow: 5px 9px 18px hsl(180, 29%, 50%, 0.3);
+`;
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledDescriptionList = styled.dl`
@@ -65,18 +71,21 @@ export const StyledDescriptionDetail = styled.dd`
   text-transform: uppercase;
   font-size: 18px;
   padding: 0.5rem 0rem;
+  margin-inline-start: none;
   color: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
 `;
 
-export const StyledButton = styled.button`
-  padding: 1rem;
-  width: 50%;
-  justify-self: center;
-  border: none;
-  background: #ffffff;
-  border-radius: 10px;
-  &:hover {
-    background: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
-    color: #ffffff;
+export const StyledTitle = styled(Banner)`
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  color: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
+  span {
+    font-size: 13px;
   }
+`;
+
+export const StyledRecommendationNumber = styled(Banner)`
+  align-self: flex-end;
+  color: ${(props) => props.theme.palette.neutral.darkDesaturatedBlue};
 `;
