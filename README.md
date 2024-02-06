@@ -46,7 +46,6 @@ You will also see any lint errors in the console.
 
 - [React](https://reactjs.org/) - JS library
 - [Typescript](https://www.typescriptlang.org/) - Javascript with syntax for types
-- [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 - [xml2js](https://www.npmjs.com/package/xml2js#node-xml2js) - XML to Javascript object converter
 
